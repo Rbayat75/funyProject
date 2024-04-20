@@ -20,6 +20,10 @@ export const schema1 = {
     },
     {
       key: "dropdown",
+      onSelect: function (evt, node) {
+        // هر زمان که select element رندر می‌شود، این کد اجرا می‌شود
+        $(node.el).find("select").dropdown();
+      },
     },
     {
       key: "checkbox",
