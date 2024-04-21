@@ -33,16 +33,6 @@ export const schema1 = {
     {
       type: "button",
       title: "Submit",
-      onClick: function (evt) {
-        evt.preventDefault();
-        var formData = $("#myform").serializeArray();
-        var formDataObject = {};
-        $.each(formData, function () {
-          formDataObject[this.name] = this.value;
-        });
-        // alert(JSON.stringify(formDataObject, null, 2));
-        console.log(formDataObject);
-      },
     },
   ],
 };
