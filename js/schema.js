@@ -39,51 +39,41 @@ export const schema1 = {
 
 export const schema2 = {
   schema: {
-    fieldset1: {
-      type: "object",
-      properties: {
-        Integer: {
-          type: "integer",
-          title: "Integer",
-          name: "integer",
-          default: 101,
-        },
-        Email: {
-          type: "email",
-          title: "Email",
-          name: "email",
-          default: "jack",
-        },
-        Decimal: {
-          type: "string",
-          title: "Decimal",
-          name: "decimal",
-          default: "1.1.1",
-        },
-      },
+    Integer: {
+      type: "integer",
+      title: "Integer",
+      name: "integer",
+      default: 101,
     },
-    fieldset2: {
-      type: "object",
-      properties: {
-        Number: {
-          type: "string",
-          title: "Number",
-          name: "number",
-          default: "+200",
-        },
-        URL: {
-          type: "string",
-          title: "URL",
-          name: "url",
-          default: "ww.fakeurl.com",
-        },
-        RegEx: {
-          type: "string",
-          title: "RegEx",
-          name: "regex",
-          default: "joe",
-        },
-      },
+    Email: {
+      type: "email",
+      title: "Email",
+      name: "email",
+      default: "jack",
+    },
+    Decimal: {
+      type: "string",
+      title: "Decimal",
+      name: "decimal",
+      default: "1.1.1",
+    },
+    Number: {
+      type: "string",
+      title: "Number",
+      name: "number",
+      default: "+200",
+    },
+    URL: {
+      type: "string",
+      title: "URL",
+      name: "url",
+      default: "ww.fakeurl.com",
+    },
+    RegEx: {
+      type: "string",
+      title: "RegEx",
+      name: "regex",
+      default: "joe",
     },
   },
   form: [
@@ -92,12 +82,14 @@ export const schema2 = {
       htmlClass: "ui two column grid",
       items: [
         {
-          key: "fieldset1",
+          type: "fieldset",
           htmlClass: "eight wide column",
+          items: ["Integer", "Email", "Decimal"],
         },
         {
-          key: "fieldset2",
+          type: "fieldset",
           htmlClass: "eight wide column",
+          items: ["Number", "URL", "RegEx"],
         },
       ],
     },
